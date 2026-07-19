@@ -22,35 +22,32 @@ npm run build    # static site output in out/
 ## Before launch: confirm with the owner
 
 - [ ] **Hours** — listings disagree (5 AM vs 6 AM open). Site says 5:00 AM to 12:00 PM daily.
-- [ ] **Phone** — (325) 642-3277.
+- [ ] **Phone** — IMPORTANT: public listings say (325) 642-3277 (currently on
+      the site), but the shop's own cup sticker reads (325) 430-4700 and
+      "1417 B Austin ave". Call or ask Ross which is right, and whether the
+      address needs the "B" suffix.
 - [ ] **Menu categories** — donuts / breakfast (kolaches, croissants, biscuits) / coffee & drinks. No prices shown by design.
 - [ ] **Reviews** — the three quotes in `lib/site.js` are excerpts seen in public Google reviews. Verify exact wording against the live reviews right before launch; do not rewrite them.
 - [ ] **Rating** — confirm the live Google rating (site says 4.7 stars, review count deliberately not shown).
 - [ ] **Domain** — `lib/site.js` has a placeholder (`rossdonutsbrownwood.com`). The owner should own the domain, even if you maintain the site.
 
-## The photo session (20 minutes, an iPhone is fine)
+## Photos
 
-The hero currently uses an illustration. Real photos are the single biggest
-upgrade. Shot list, roughly in order of importance:
+Four real shop photos are live: the hero (iced coffee and decorated donuts)
+plus a gallery with the lit storefront sign, a latte with the shop sticker,
+and a croissant breakfast sandwich. The license plate in the storefront shot
+is blurred.
 
-1. **The owner behind the counter** (this becomes the hero image)
-2. Exterior with the Ross Donuts sign
-3. Full display case
-4. Fresh glazed donuts on a tray
-5. Kolaches or breakfast sandwiches
-6. Coffee beside a donut
-7. Donuts being boxed
-8. Owner handing an order across the counter
-9. One wide interior shot
+Still wanted from the next visit (20 minutes, an iPhone is fine):
 
-Then:
+1. **The owner behind the counter** — this should become the hero image
+   (swap the `src` in the hero `<img>` in `app/page.jsx`)
+2. Full display case
+3. Fresh kolaches in the warmer
+4. Donuts being boxed / handed across the counter
 
-1. Drop the files into `public/images/`.
-2. List 6-9 of them in the `photos` array in `lib/site.js` (the gallery section
-   appears automatically once the array is non-empty).
-3. For the hero: in `app/page.jsx`, replace the `<Donut />` illustration with
-   the `<img className="hero-photo" ...>` tag shown in the comment there.
-4. Don't reuse customer-uploaded Google photos without knowing who took them.
+To add more: drop optimized JPGs into `public/images/` and add entries to the
+`photos` array in `lib/site.js` — the gallery updates automatically.
 
 ## Deploying on Vercel
 

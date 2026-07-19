@@ -36,14 +36,15 @@ export default function Home() {
           </div>
 
           {/*
-            Swap this illustration for a real photo after the photo session:
-            replace <Donut /> with
-              <img className="hero-photo" src="/images/hero.jpg"
-                   alt="The owner behind the counter at Ross Donuts" />
-            The owner behind the counter is the best possible hero shot.
+            When there's a photo of the owner behind the counter, it should
+            replace this one - that's the best possible hero shot.
           */}
-          <div className="donut-stage" aria-hidden="true">
-            <Donut />
+          <div className="donut-stage">
+            <img
+              className="hero-photo"
+              src="/images/case-tray.jpg"
+              alt="An iced coffee next to a tray of freshly decorated donuts at Ross Donuts"
+            />
           </div>
         </div>
       </header>
@@ -181,20 +182,5 @@ export default function Home() {
         <a href={site.directionsUrl}>Directions</a>
       </div>
     </>
-  );
-}
-
-function Donut() {
-  return (
-    <div className="donut">
-      <div className="glaze" />
-      <span className="sprinkle s1" />
-      <span className="sprinkle s2" />
-      <span className="sprinkle s3" />
-      <span className="sprinkle s4" />
-      <span className="sprinkle s5" />
-      <span className="sprinkle s6" />
-      <div className="hole" />
-    </div>
   );
 }
