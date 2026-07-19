@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers config: serves the static Next.js export in out/
+  // as a static-assets Worker. Build command: npm run build
+  // Deploy command: npx wrangler deploy
+  "name": "rossdonuts",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
